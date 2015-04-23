@@ -26,10 +26,17 @@ def complement_codon(input_codon):
 
     return complemented_codon
 
-#Build function to check if all characters in codon are acceptable. With return False the function will stop,
-# It is like stop in R.
-
 def is_codon_correct(input_codon):
+    """ Check correctness of input codons.
+
+    :param input_codon: It is expected to be a three-base codon.
+    :return: True or False
+
+    >>> from pydna import seq_utils
+    >>> input_codon = 'ATC'
+    >>> seq_utils.is_codon_correct(input_codon)
+    True
+    """
     if type(input_codon) == float:
         return False
         
